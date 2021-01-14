@@ -2,19 +2,30 @@
 <template>
 <div>
   <Scene>
-  <Box :position="[0, 0, 5]"></Box>
+    <HemisphericLight>
+      <property name="intensity" :float="2"></property>
+    </HemisphericLight>
+    <Camera type="arcRotate"></Camera>
+    
+    <HemisphericLight></HemisphericLight>
+    <Asset :src="dummy3" :scaling="[10, 10, 10]">
+      <Animation property="rotation.y" :duration="5" :end="-Math.PI * 2"></Animation>
+    </Asset>
 </Scene>
 </div>
 </template>
 
 <script>
+import dummy3 from 'file-loader!@/assets/mc-laren/source/McLaren.glb';
+
 export default {
 
   data() {
     return {
       myScene: null,
       myEntity: null,
-      myBox: null,
+      myAssetRoot: null,
+      dummy3,
     };
   },
 
