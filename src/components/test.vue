@@ -84,7 +84,7 @@
           rect1.background = "white";
           advancedTexture.addControl(rect1);
           rect1.linkWithMesh(car)  
-          //rect1.linkOffsetY = -8;
+          rect1.linkOffsetY = -20;
 
           this.label = new BabylonGUI.TextBlock();
           this.label.text =  `Lighthouse power: ${this.labelValue}kw`;
