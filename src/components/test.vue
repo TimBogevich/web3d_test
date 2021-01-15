@@ -16,6 +16,8 @@
         engine: null,
         canvas: null,
         mainCamera: null,
+        light : null,
+
         dummy3 : dummy3.replace("/", ""),
       };
     },
@@ -27,20 +29,20 @@
         this.scene = new BABYLON.Scene(this.engine)
         this.scene.clearColor = new BABYLON.Color4(0.66, 0.66, 0.66, 1);
 
-        this.mainCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1.5, 1.3, 20, BABYLON.Vector3.Zero(), this.scene)
+        this.mainCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1.5, 1.3, 1.6, BABYLON.Vector3.Zero(), this.scene)
         this.mainCamera.attachControl(this.canvas, true)
         this.scene.beforeRender = function () {
+
+
+        this.light = new BABYLON.DirectionalLight('light', new BABYLON.Vector3(1.5, -1.3, -1.6), this.scene)
+        this.light.intensity = 10;
 
         }
         this.engine.runRenderLoop(function () {
           _this.scene.render()
         })
         BABYLON.SceneLoader.Append("", this.dummy3, this.scene, (scene) => {
-          const lighthouse = scene.meshes[3];
-            lighthouse.scaling = new Vector3(600, 600, 600);
-            lighthouse.position.y = -10;
-            lighthouse.position.z = 40;
-            lighthouse.position.x = 0
+
         });
 
       }
