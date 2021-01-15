@@ -7,9 +7,6 @@ import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false
 
-import vb from 'vue-babylonjs';
-Vue.use(vb);
-
 
 new Vue({
   router,
