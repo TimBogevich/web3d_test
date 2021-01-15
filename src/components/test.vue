@@ -27,7 +27,7 @@
         this.canvas = document.getElementById("renderCanvas")
         this.engine = new BABYLON.Engine(this.canvas, true)
         this.scene = new BABYLON.Scene(this.engine)
-        this.scene.clearColor = new BABYLON.Color4(0.66, 0.66, 0.66, 1);
+        this.scene.clearColor = new BABYLON.Color4(0.8, 0.8, 0.156, 0.9);
 
         this.mainCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1.5, 1.3, 1.6, BABYLON.Vector3.Zero(), this.scene)
         this.mainCamera.attachControl(this.canvas, true)
