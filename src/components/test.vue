@@ -8,6 +8,7 @@
 <script>
   import * as BABYLON from 'babylonjs';
   import * as BABYLON_MAT from "babylonjs-materials";
+    import * as BabylonGUI from "babylonjs-gui"
   import 'babylonjs-loaders';
   import McLaren from 'file-loader!@/assets/mc-laren/source/McLaren.glb';
 
@@ -60,11 +61,32 @@
         this.shadowGenerator.setDarkness(0.75);
 
 
+        var advancedTexture = BabylonGUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+
+
+
+
         BABYLON.SceneLoader.Append("", this.McLaren, this.scene, (scene) => {
           let car = scene.getNodeByID("__root__")
           car.scaling = new BABYLON.Vector3(3, 3, 3);
           car.position.y = 0.2
           this.shadowGenerator.addShadowCaster(car);
+
+        var rect1 = new BabylonGUI.Rectangle();
+        rect1.width = 0.2;
+        rect1.height = "30px";
+        rect1.cornerRadius = 20;
+        rect1.color = "Green";
+        rect1.thickness = 4;
+        rect1.background = "white";
+        advancedTexture.addControl(rect1);
+        rect1.linkWithMesh(car)  
+        rect1.linkOffsetY = -8;
+
+        var label = new BabylonGUI.TextBlock();
+        label.text = "Power produced: 400 hp";
+        rect1.addControl(label);
+
         });
 
       }
