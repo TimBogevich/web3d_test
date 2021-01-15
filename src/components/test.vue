@@ -10,7 +10,7 @@
   import * as BABYLON_MAT from "babylonjs-materials";
     import * as BabylonGUI from "babylonjs-gui"
   import 'babylonjs-loaders';
-  import McLaren from 'file-loader!@/assets/mc-laren/source/McLaren.glb';
+  import McLaren from 'file-loader!@/assets/untitled.glb';
 
   export default {
     data() {
@@ -49,7 +49,7 @@
         helper.setMainColor(BABYLON.Color3.Gray());
         helper.ground.position.y += 0;
 
-        this.mainCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1.5, 1.3, 2, BABYLON.Vector3.Zero(), this.scene)
+        this.mainCamera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1.5, 1, 7, BABYLON.Vector3.Zero(), this.scene)
 
         this.engine.runRenderLoop(function () {
           _this.scene.render()
@@ -67,8 +67,8 @@
 
 
         BABYLON.SceneLoader.Append("", this.McLaren, this.scene, (scene) => {
-          let car = scene.getNodeByID("__root__")
-          car.scaling = new BABYLON.Vector3(3, 3, 3);
+          let car = scene.getMeshByUniqueID(69)
+          //car.scaling = new BABYLON.Vector3(1, 1, 1);
           car.position.y = 0.2
           this.shadowGenerator.addShadowCaster(car);
 
@@ -100,8 +100,8 @@
       value(newValue, oldValue) {
         this.logScene()
         let camera = this.mainCamera
-        newValue = 2 + (newValue - 50) / 10
-        camera.setPosition(new BABYLON.Vector3(1.5, 1.3, newValue));
+        newValue = 1.5 + (newValue - 50) / 10
+        camera.alpha = newValue
       }
     } 
   }
