@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-slider v-model="value" step="1"></v-slider>
+    <v-slider v-model="labelValue" step="1"></v-slider>
      <canvas id="renderCanvas" style="height: 50%; width: 100%"></canvas>
   </div>
 </template>
@@ -23,6 +24,8 @@
         mainCamera: null,
         light : null,
         shadowGenerator : null,
+        label : null,
+        labelValue : 50,
         McLaren : McLaren.replace("/", ""),
       };
     },
@@ -67,25 +70,25 @@
 
 
         BABYLON.SceneLoader.Append("", this.McLaren, this.scene, (scene) => {
-          let car = scene.getMeshByUniqueID(69)
-          //car.scaling = new BABYLON.Vector3(1, 1, 1);
-          car.position.y = 0.2
+          let car = scene.getMeshByUniqueID(30)
+          //car.scaling = new BABYLON.Vector3(0.2, 0.2, 0.2);
+          //car.position.y = 0.2
           this.shadowGenerator.addShadowCaster(car);
 
-        var rect1 = new BabylonGUI.Rectangle();
-        rect1.width = 0.2;
-        rect1.height = "30px";
-        rect1.cornerRadius = 20;
-        rect1.color = "Green";
-        rect1.thickness = 4;
-        rect1.background = "white";
-        advancedTexture.addControl(rect1);
-        rect1.linkWithMesh(car)  
-        rect1.linkOffsetY = -8;
+          var rect1 = new BabylonGUI.Rectangle();
+          rect1.width = 0.2;
+          rect1.height = "30px";
+          rect1.cornerRadius = 20;
+          rect1.color = "Green";
+          rect1.thickness = 4;
+          rect1.background = "white";
+          advancedTexture.addControl(rect1);
+          rect1.linkWithMesh(car)  
+          //rect1.linkOffsetY = -8;
 
-        var label = new BabylonGUI.TextBlock();
-        label.text = "Power produced: 400 hp";
-        rect1.addControl(label);
+          this.label = new BabylonGUI.TextBlock();
+          this.label.text =  `Lighthouse power: ${this.labelValue}kw`;
+          rect1.addControl(this.label);
 
         });
 
@@ -98,10 +101,12 @@
     },
     watch : {
       value(newValue, oldValue) {
-        this.logScene()
         let camera = this.mainCamera
-        newValue = 1.5 + (newValue - 50) / 10
+        newValue = 1.5 + (newValue - 50) / 50
         camera.alpha = newValue
+      },
+      labelValue(newValue, oldValue) {
+        this.label.text = `Lighthouse power: ${newValue}kw`;
       }
     } 
   }
