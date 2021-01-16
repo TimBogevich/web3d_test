@@ -47,7 +47,7 @@
         this.scene.debugLayer.show();
 
         this.light = new BABYLON.DirectionalLight('light', new BABYLON.Vector3(1.5, -2.3, -1.6), this.scene)
-        this.light.intensity = 10;
+        this.light.intensity = 2;
 
         // this.ground = BABYLON.Mesh.CreateGround("ground", 500, 500, 5, this.scene);
         // this.ground.receiveShadows = true
