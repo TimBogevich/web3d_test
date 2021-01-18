@@ -11,15 +11,6 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 		Keep Z-up r-handed  :  no
 		Texture directory   :  C:\GIT\web3d_test\src\assets\
 	Python World class constructor completed
-	processing begun of mesh:  Plane
-		processing begun of material:  Material.002
-		num positions      :  4
-		num normals        :  4
-		num tangents       :  0
-		num uvs            :  8
-		num uvs2           :  0
-		num colors         :  0
-		num triangles      :  2
 	processing begun of mesh:  Cylinder.001
 		processing begun of material:  Material.008
 		processing begun of material:  Material.009
@@ -335,34 +326,19 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  2820
-	processing begun of mesh:  Cylinder.014
-		processing begun of material:  Material.026
-		processing begun of material:  Material.027
-		processing begun of material:  Material.028
-		processing begun of material:  Material.029
-		processing begun of material:  Material.030
-		processing begun of material:  Material.031
-		processing begun of material:  Material.032
-		registered as also a user of material:  Material.026
-		registered as also a user of material:  Material.027
-		registered as also a user of material:  Material.028
-		registered as also a user of material:  Material.029
-		registered as also a user of material:  Material.030
-		registered as also a user of material:  Material.031
-		registered as also a user of material:  Material.032
-		processing begun of multimaterial:  fabric.Multimaterial#15
-		num positions      :  6078
-		num normals        :  6078
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Plane
+		processing begun of material:  Material.001
+		num positions      :  4
+		num normals        :  4
 		num tangents       :  0
-		num uvs            :  12156
+		num uvs            :  8
 		num uvs2           :  0
 		num colors         :  0
-		num triangles      :  2820
-	processing begun of camera (UniversalCamera):  Camera
+		num triangles      :  2
 	processing begun of light (DIRECTIONAL):  Sun
 	processing begun of shadows for light:  Sun
 ========= Writing of JSON file started =========
-	writing mesh:  Plane
 	writing mesh:  Cylinder.001
 	writing mesh:  Cylinder.007
 	writing mesh:  Cube
@@ -390,7 +366,7 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 	writing mesh:  Cylinder.002
 	writing mesh:  Cylinder.004
 	writing mesh:  Cylinder.011
-	writing mesh:  Cylinder.014
+	writing mesh:  Plane
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 2.4757 secs
+elapsed time:  0 min, 8.9295 secs

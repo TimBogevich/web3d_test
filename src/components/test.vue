@@ -1,7 +1,5 @@
 <template>
   <div>
-    <v-slider v-model="value" step="1"></v-slider>
-    <v-slider v-model="labelValue" step="1"></v-slider>
      <canvas id="renderCanvas" style="height: 100%; width: 100%"></canvas>
   </div>
 </template>
@@ -9,13 +7,14 @@
 <script>
   import * as BABYLON from 'babylonjs';
   import * as BABYLON_MAT from "babylonjs-materials";
-    import * as BabylonGUI from "babylonjs-gui"
+  import * as BabylonGUI from "babylonjs-gui"
   import 'babylonjs-loaders';
   import fabric from 'file-loader!@/assets/fabric.babylon';
+import { PointParticleEmitter } from 'babylonjs';
 
   BABYLON.ArcRotateCamera.prototype.spinTo = function (whichprop, targetval, speed) {
-      var ease = new BABYLON.CubicEase();
-      ease.setEasingMode(BABYLON.EasingFunction.EASINGMODE_EASEINOUT);
+    var ease = new BABYLON.CubicEase();
+    ease.setEasingMode(BABYLON.EasingFunction.EASINGMODE_EASEINOUT);
     BABYLON.Animation.CreateAndStartAnimation('at4', this, whichprop, speed, 120, this[whichprop], targetval, 0, ease);
   }
 
@@ -32,6 +31,7 @@
         shadowGenerator : null,
         label : null,
         labelValue : 50,
+        advancedTexture : null,
         fabric : fabric.replace("/", ""),
       };
     },
@@ -39,29 +39,46 @@
       logScene() {
         console.log(this.scene)
       },
-      init() {
-        const _this = this
-        this.canvas = document.getElementById("renderCanvas")
-        this.engine = new BABYLON.Engine(this.canvas, true)
-        this.scene = new BABYLON.SceneLoader.Load("", this.fabric, this.engine, (scene) => {
-          scene.debugLayer.show();
-          scene.setActiveCameraByName("Camera")
-          debugger
-          this.mainCamera = scene.getCameraByName("Camera")
-          this.engine.runRenderLoop(function () {
-            scene.render()
-          })
-        })
+      createLabel(element, text) {
+        let mesh = this.scene.getMeshByName(element)
+        let rect1 = new BabylonGUI.Rectangle();
+        rect1.width = 0.14;
+        rect1.height = "30px";
+        rect1.cornerRadius = 20;
+        rect1.color = "Green";
+        rect1.thickness = 4;
+        rect1.background = "white";
+        this.advancedTexture.addControl(rect1);
+        rect1.linkWithMesh(mesh)  
+        rect1.linkOffsetY = -60;
 
-
+        let label = new BabylonGUI.TextBlock();
+        label.text =  text;
+        rect1.addControl(label);
       },
-
-
+      async init() {
+        return new Promise((resolve, reject) => {
+          this.canvas = document.getElementById("renderCanvas")
+          this.engine = new BABYLON.Engine(this.canvas, true)
+          let wait = BABYLON.SceneLoader.Load("", this.fabric, this.engine, (scene) => {
+            scene.setActiveCameraByName("Camera")
+            this.mainCamera = scene.getCameraByName("Camera")
+            this.engine.runRenderLoop(() => {
+              scene.render()
+            })
+            this.scene = scene
+            resolve("success")      
+          })
+          this.advancedTexture = BabylonGUI.AdvancedDynamicTexture.CreateFullscreenUI("UI")
+        })
+      }
       
     },
-    mounted() {
-      console.log("test")
-      this.init()
+    async mounted() {
+      let wait = await this.init()
+      this.scene.debugLayer.show();
+      this.createLabel('Cylinder.004', 'CO2: 10Kg/h')
+      this.createLabel('Cube.002', 'Power: 80Kw')
     },
     watch : {
       value(newValue, oldValue) {
