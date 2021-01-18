@@ -1,0 +1,397 @@
+Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  C:\GIT\web3d_test\src\blender\
+	Python World class constructor completed
+	processing begun of mesh:  Plane
+		processing begun of material:  Material.002
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  Cylinder.001
+		processing begun of material:  Material.008
+		processing begun of material:  Material.009
+		processing begun of multimaterial:  fabric.Multimaterial#0
+		num positions      :  226
+		num normals        :  226
+		num tangents       :  0
+		num uvs            :  452
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  112
+		WARNING: # of 0 area faces found:  32
+	processing begun of mesh:  Cylinder.007
+		processing begun of material:  Material.004
+		processing begun of material:  Material.005
+		processing begun of multimaterial:  fabric.Multimaterial#1
+		num positions      :  404
+		num normals        :  404
+		num tangents       :  0
+		num uvs            :  808
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  160
+	processing begun of mesh:  Cube
+		processing begun of material:  Material.010
+		processing begun of material:  Material.011
+		processing begun of multimaterial:  fabric.Multimaterial#2
+		num positions      :  237
+		num normals        :  237
+		num tangents       :  0
+		num uvs            :  474
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  116
+	processing begun of mesh:  Cube.001
+		processing begun of material:  Material.012
+		processing begun of material:  Material.013
+		processing begun of multimaterial:  fabric.Multimaterial#3
+		num positions      :  90
+		num normals        :  90
+		num tangents       :  0
+		num uvs            :  180
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  Cube.002
+		processing begun of material:  Material.016
+		processing begun of material:  Material.017
+		processing begun of material:  Material.018
+		processing begun of multimaterial:  fabric.Multimaterial#4
+		num positions      :  2483
+		num normals        :  2483
+		num tangents       :  0
+		num uvs            :  4966
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1324
+		WARNING: # of 0 area faces found:  100
+	processing begun of mesh:  Cylinder.009
+		processing begun of material:  Material.025
+		num positions      :  217
+		num normals        :  217
+		num tangents       :  0
+		num uvs            :  434
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Cylinder.010
+		processing begun of material:  Material.024
+		num positions      :  217
+		num normals        :  217
+		num tangents       :  0
+		num uvs            :  434
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Cube.003
+		processing begun of material:  Material.022
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Cube.004
+		processing begun of material:  Material.021
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Cube.005
+		processing begun of material:  Material.020
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Cube.006
+		processing begun of material:  Material.019
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Cylinder.012
+		processing begun of material:  Material.023
+		num positions      :  980
+		num normals        :  980
+		num tangents       :  0
+		num uvs            :  1960
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  432
+	processing begun of mesh:  Icosphere.009
+		processing begun of material:  Material.006
+		num positions      :  600
+		num normals        :  600
+		num tangents       :  0
+		num uvs            :  1200
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  200
+	processing begun of mesh:  Cylinder.013
+		processing begun of material:  Material.014
+		processing begun of material:  Material.015
+		processing begun of multimaterial:  fabric.Multimaterial#5
+		num positions      :  20011
+		num normals        :  20011
+		num tangents       :  0
+		num uvs            :  40022
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8640
+	WARNING: The following object (type - CURVE) is not currently exportable thus ignored: BezierCurve
+	processing begun of mesh:  Cylinder.017
+		processing begun of material:  Material.026
+		processing begun of material:  Material.027
+		processing begun of material:  Material.028
+		processing begun of material:  Material.029
+		processing begun of material:  Material.030
+		processing begun of material:  Material.031
+		processing begun of material:  Material.032
+		processing begun of multimaterial:  fabric.Multimaterial#6
+		num positions      :  6078
+		num normals        :  6078
+		num tangents       :  0
+		num uvs            :  12156
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2820
+	processing begun of mesh:  Cylinder.000
+		processing begun of material:  Material.004
+		processing begun of material:  Material.005
+		registered as also a user of material:  Material.004
+		registered as also a user of material:  Material.005
+		processing begun of multimaterial:  fabric.Multimaterial#7
+		num positions      :  404
+		num normals        :  404
+		num tangents       :  0
+		num uvs            :  808
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  160
+	processing begun of mesh:  Icosphere.000
+		processing begun of material:  Material.006
+		registered as also a user of material:  Material.006
+		num positions      :  600
+		num normals        :  600
+		num tangents       :  0
+		num uvs            :  1200
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  200
+	processing begun of mesh:  Cylinder.003
+		processing begun of material:  Material.004
+		processing begun of material:  Material.005
+		registered as also a user of material:  Material.004
+		registered as also a user of material:  Material.005
+		processing begun of multimaterial:  fabric.Multimaterial#8
+		num positions      :  404
+		num normals        :  404
+		num tangents       :  0
+		num uvs            :  808
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  160
+	processing begun of mesh:  Icosphere.001
+		processing begun of material:  Material.006
+		registered as also a user of material:  Material.006
+		num positions      :  600
+		num normals        :  600
+		num tangents       :  0
+		num uvs            :  1200
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  200
+	processing begun of mesh:  Cylinder.006
+		processing begun of material:  Material.004
+		processing begun of material:  Material.005
+		registered as also a user of material:  Material.004
+		registered as also a user of material:  Material.005
+		processing begun of multimaterial:  fabric.Multimaterial#9
+		num positions      :  404
+		num normals        :  404
+		num tangents       :  0
+		num uvs            :  808
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  160
+	processing begun of mesh:  Icosphere.002
+		processing begun of material:  Material.006
+		registered as also a user of material:  Material.006
+		num positions      :  600
+		num normals        :  600
+		num tangents       :  0
+		num uvs            :  1200
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  200
+	processing begun of mesh:  Cylinder.008
+		processing begun of material:  Material.004
+		processing begun of material:  Material.005
+		registered as also a user of material:  Material.004
+		registered as also a user of material:  Material.005
+		processing begun of multimaterial:  fabric.Multimaterial#10
+		num positions      :  404
+		num normals        :  404
+		num tangents       :  0
+		num uvs            :  808
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  160
+	processing begun of mesh:  Icosphere.003
+		processing begun of material:  Material.006
+		registered as also a user of material:  Material.006
+		num positions      :  600
+		num normals        :  600
+		num tangents       :  0
+		num uvs            :  1200
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  200
+	processing begun of mesh:  Cylinder.005
+		processing begun of material:  Material.008
+		processing begun of material:  Material.009
+		registered as also a user of material:  Material.008
+		registered as also a user of material:  Material.009
+		processing begun of multimaterial:  fabric.Multimaterial#11
+		num positions      :  226
+		num normals        :  226
+		num tangents       :  0
+		num uvs            :  452
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  112
+		WARNING: # of 0 area faces found:  32
+	processing begun of mesh:  Cylinder.002
+		processing begun of material:  Material.008
+		processing begun of material:  Material.009
+		registered as also a user of material:  Material.008
+		registered as also a user of material:  Material.009
+		processing begun of multimaterial:  fabric.Multimaterial#12
+		num positions      :  226
+		num normals        :  226
+		num tangents       :  0
+		num uvs            :  452
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  112
+		WARNING: # of 0 area faces found:  32
+	processing begun of mesh:  Cylinder.004
+		processing begun of material:  Material.008
+		processing begun of material:  Material.009
+		registered as also a user of material:  Material.008
+		registered as also a user of material:  Material.009
+		processing begun of multimaterial:  fabric.Multimaterial#13
+		num positions      :  226
+		num normals        :  226
+		num tangents       :  0
+		num uvs            :  452
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  112
+		WARNING: # of 0 area faces found:  32
+	processing begun of mesh:  Cylinder.011
+		processing begun of material:  Material.026
+		processing begun of material:  Material.027
+		processing begun of material:  Material.028
+		processing begun of material:  Material.029
+		processing begun of material:  Material.030
+		processing begun of material:  Material.031
+		processing begun of material:  Material.032
+		registered as also a user of material:  Material.026
+		registered as also a user of material:  Material.027
+		registered as also a user of material:  Material.028
+		registered as also a user of material:  Material.029
+		registered as also a user of material:  Material.030
+		registered as also a user of material:  Material.031
+		registered as also a user of material:  Material.032
+		processing begun of multimaterial:  fabric.Multimaterial#14
+		num positions      :  6078
+		num normals        :  6078
+		num tangents       :  0
+		num uvs            :  12156
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2820
+	processing begun of mesh:  Cylinder.014
+		processing begun of material:  Material.026
+		processing begun of material:  Material.027
+		processing begun of material:  Material.028
+		processing begun of material:  Material.029
+		processing begun of material:  Material.030
+		processing begun of material:  Material.031
+		processing begun of material:  Material.032
+		registered as also a user of material:  Material.026
+		registered as also a user of material:  Material.027
+		registered as also a user of material:  Material.028
+		registered as also a user of material:  Material.029
+		registered as also a user of material:  Material.030
+		registered as also a user of material:  Material.031
+		registered as also a user of material:  Material.032
+		processing begun of multimaterial:  fabric.Multimaterial#15
+		num positions      :  6078
+		num normals        :  6078
+		num tangents       :  0
+		num uvs            :  12156
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2820
+	processing begun of camera (ArcRotateCamera):  Camera
+		WARNING: Camera type with mandatory target specified, but no target to track set.  Ignored
+	processing begun of light (DIRECTIONAL):  Sun
+	processing begun of shadows for light:  Sun
+========= Writing of JSON file started =========
+	writing mesh:  Plane
+	writing mesh:  Cylinder.001
+	writing mesh:  Cylinder.007
+	writing mesh:  Cube
+	writing mesh:  Cube.001
+	writing mesh:  Cube.002
+	writing mesh:  Cylinder.009
+	writing mesh:  Cylinder.010
+	writing mesh:  Cube.003
+	writing mesh:  Cube.004
+	writing mesh:  Cube.005
+	writing mesh:  Cube.006
+	writing mesh:  Cylinder.012
+	writing mesh:  Icosphere.009
+	writing mesh:  Cylinder.013
+	writing mesh:  Cylinder.017
+	writing mesh:  Cylinder.000
+	writing mesh:  Icosphere.000
+	writing mesh:  Cylinder.003
+	writing mesh:  Icosphere.001
+	writing mesh:  Cylinder.006
+	writing mesh:  Icosphere.002
+	writing mesh:  Cylinder.008
+	writing mesh:  Icosphere.003
+	writing mesh:  Cylinder.005
+	writing mesh:  Cylinder.002
+	writing mesh:  Cylinder.004
+	writing mesh:  Cylinder.011
+	writing mesh:  Cylinder.014
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.246 secs
