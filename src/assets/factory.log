@@ -1,0 +1,183 @@
+Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  C:\GIT\web3d_test\src\assets\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Plane.001
+		WARNING: No materials have been assigned: 
+		num positions      :  0
+		num normals        :  0
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  0
+	WARNING: mesh, Plane.001, has 0 vertices; ignored
+	processing begun of mesh:  Cube.014
+		processing begun of material:  Material
+			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture Cube_014_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			bake time:  0 min, 0.4824 secs
+		num positions      :  2016
+		num normals        :  2016
+		num tangents       :  0
+		num uvs            :  4032
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  672
+	processing begun of mesh:  Cube.011
+		processing begun of material:  Material
+			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture Cube_011_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			bake time:  0 min, 0.7855 secs
+		num positions      :  2016
+		num normals        :  2016
+		num tangents       :  0
+		num uvs            :  4032
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  672
+	processing begun of mesh:  Cube.013
+		processing begun of material:  Material
+			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture Cube_013_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			bake time:  0 min, 1.8078 secs
+		num positions      :  364
+		num normals        :  364
+		num tangents       :  0
+		num uvs            :  728
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  672
+	processing begun of mesh:  Cube.016
+		processing begun of material:  Material
+			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture Cube_016_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			bake time:  0 min, 1.8279 secs
+		num positions      :  2016
+		num normals        :  2016
+		num tangents       :  0
+		num uvs            :  4032
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  672
+	processing begun of mesh:  Cube.018
+		processing begun of material:  Material
+			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture Cube_018_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			bake time:  0 min, 1.8507 secs
+		num positions      :  2016
+		num normals        :  2016
+		num tangents       :  0
+		num uvs            :  4032
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  672
+	processing begun of mesh:  Cube.020
+		processing begun of material:  Material
+			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture Cube_020_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			bake time:  0 min, 2.0133 secs
+		num positions      :  2016
+		num normals        :  2016
+		num tangents       :  0
+		num uvs            :  4032
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  672
+	processing begun of mesh:  Plane.002
+		processing begun of material:  Material.002
+		num positions      :  40449
+		num normals        :  40449
+		num tangents       :  0
+		num uvs            :  80898
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16882
+		WARNING: # of 0 area faces found:  1109
+	processing begun of mesh:  Cube.038
+		WARNING: No materials have been assigned: 
+		num positions      :  684
+		num normals        :  684
+		num tangents       :  0
+		num uvs            :  1368
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  228
+	processing begun of mesh:  Cube.032
+		WARNING: No materials have been assigned: 
+		num positions      :  684
+		num normals        :  684
+		num tangents       :  0
+		num uvs            :  1368
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  228
+	processing begun of mesh:  Cube.033
+		WARNING: No materials have been assigned: 
+		num positions      :  684
+		num normals        :  684
+		num tangents       :  0
+		num uvs            :  1368
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  228
+	processing begun of mesh:  Plane.005
+		WARNING: No materials have been assigned: 
+		num positions      :  0
+		num normals        :  0
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  0
+	WARNING: mesh, Plane.005, has 0 vertices; ignored
+	processing begun of mesh:  Door
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of camera (UniversalCamera):  Camera.001
+	processing begun of light (HEMI FROM AREA):  Area
+	processing begun of light (DIRECTIONAL):  Sun
+	processing begun of shadows for light:  Sun
+========= Writing of JSON file started =========
+	writing mesh:  Cube.014
+	writing mesh:  Cube.011
+	writing mesh:  Cube.013
+	writing mesh:  Cube.016
+	writing mesh:  Cube.018
+	writing mesh:  Cube.020
+	writing mesh:  Plane.002
+	writing mesh:  Cube.038
+	writing mesh:  Cube.032
+	writing mesh:  Cube.033
+	writing mesh:  Door
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 16.7481 secs

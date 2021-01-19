@@ -9,8 +9,8 @@
   import * as BABYLON_MAT from "babylonjs-materials";
   import * as BabylonGUI from "babylonjs-gui"
   import 'babylonjs-loaders';
-  import fabric from 'file-loader!@/assets/fabric.babylon';
-import { PointParticleEmitter } from 'babylonjs';
+  import fabric from 'file-loader!@/assets/factory.babylon';
+  import { PointParticleEmitter } from 'babylonjs';
 
   BABYLON.ArcRotateCamera.prototype.spinTo = function (whichprop, targetval, speed) {
     var ease = new BABYLON.CubicEase();
@@ -39,6 +39,10 @@ import { PointParticleEmitter } from 'babylonjs';
       logScene() {
         console.log(this.scene)
       },
+      addSkyAndGround() {
+        let skybox = BABYLON.Mesh.CreateBox("skyBox", 100.0, this.scene);
+
+      },
       createLabel(element, text) {
         let mesh = this.scene.getMeshByName(element)
         let rect1 = new BabylonGUI.Rectangle();
@@ -63,13 +67,14 @@ import { PointParticleEmitter } from 'babylonjs';
           let wait = BABYLON.SceneLoader.Load("", this.fabric, this.engine, (scene) => {
             scene.setActiveCameraByName("Camera")
             this.mainCamera = scene.getCameraByName("Camera")
+            this.mainCamera.attachControl(this.canvas, true);
             this.engine.runRenderLoop(() => {
               scene.render()
             })
             this.scene = scene
+            this.advancedTexture = BabylonGUI.AdvancedDynamicTexture.CreateFullscreenUI("UI")
             resolve("success")      
           })
-          this.advancedTexture = BabylonGUI.AdvancedDynamicTexture.CreateFullscreenUI("UI")
         })
       }
       
@@ -77,8 +82,8 @@ import { PointParticleEmitter } from 'babylonjs';
     async mounted() {
       let wait = await this.init()
       this.scene.debugLayer.show();
-      this.createLabel('Cylinder.004', 'CO2: 10Kg/h')
-      this.createLabel('Cube.002', 'Power: 80Kw')
+      this.createLabel('Cube.020', 'CO2: 10Kg/h')
+      this.createLabel('Door', 'Passed: 20 people')
     },
     watch : {
       value(newValue, oldValue) {
