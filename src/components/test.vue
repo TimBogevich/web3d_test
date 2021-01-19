@@ -84,6 +84,7 @@
       this.scene.debugLayer.show();
       this.createLabel('Cube.020', 'CO2: 10Kg/h')
       this.createLabel('Door', 'Passed: 20 people')
+      this.createLabel('Cube.038', 'CO2: 100Kg/h')
     },
     watch : {
       value(newValue, oldValue) {

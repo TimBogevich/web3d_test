@@ -12,6 +12,8 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 		Texture directory   :  C:\GIT\web3d_test\src\assets\
 	Python World class constructor completed
 	processing begun of camera (UniversalCamera):  Camera
+		animation processing begun
+			processing action CameraAction:  in[0 - 500], out[0 - 500]
 	processing begun of mesh:  Plane.001
 		WARNING: No materials have been assigned: 
 		num positions      :  0
@@ -23,12 +25,14 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 		num triangles      :  0
 	WARNING: mesh, Plane.001, has 0 vertices; ignored
 	processing begun of mesh:  Cube.014
+		animation processing begun
+			processing action Cube.014Action:  in[185 - 185], out[0 - 185]
 		processing begun of material:  Material
 			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
 			Baking texture, type: DIFFUSE, mapped using: UVMap
 			processing texture Cube_014_baked_DIFFUSE
 				texture type:  diffuseTexture, mapped using: "UVMap"
-			bake time:  0 min, 0.4824 secs
+			bake time:  0 min, 0.4516 secs
 		num positions      :  2016
 		num normals        :  2016
 		num tangents       :  0
@@ -37,12 +41,14 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 		num colors         :  0
 		num triangles      :  672
 	processing begun of mesh:  Cube.011
+		animation processing begun
+			processing action Cube.011Action:  in[185 - 185], out[0 - 185]
 		processing begun of material:  Material
 			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
 			Baking texture, type: DIFFUSE, mapped using: UVMap
 			processing texture Cube_011_baked_DIFFUSE
 				texture type:  diffuseTexture, mapped using: "UVMap"
-			bake time:  0 min, 0.7855 secs
+			bake time:  0 min, 0.447 secs
 		num positions      :  2016
 		num normals        :  2016
 		num tangents       :  0
@@ -56,7 +62,7 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 			Baking texture, type: DIFFUSE, mapped using: UVMap
 			processing texture Cube_013_baked_DIFFUSE
 				texture type:  diffuseTexture, mapped using: "UVMap"
-			bake time:  0 min, 1.8078 secs
+			bake time:  0 min, 0.439 secs
 		num positions      :  364
 		num normals        :  364
 		num tangents       :  0
@@ -70,7 +76,7 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 			Baking texture, type: DIFFUSE, mapped using: UVMap
 			processing texture Cube_016_baked_DIFFUSE
 				texture type:  diffuseTexture, mapped using: "UVMap"
-			bake time:  0 min, 1.8279 secs
+			bake time:  0 min, 0.4852 secs
 		num positions      :  2016
 		num normals        :  2016
 		num tangents       :  0
@@ -84,7 +90,7 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 			Baking texture, type: DIFFUSE, mapped using: UVMap
 			processing texture Cube_018_baked_DIFFUSE
 				texture type:  diffuseTexture, mapped using: "UVMap"
-			bake time:  0 min, 1.8507 secs
+			bake time:  0 min, 0.5347 secs
 		num positions      :  2016
 		num normals        :  2016
 		num tangents       :  0
@@ -98,7 +104,7 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 			Baking texture, type: DIFFUSE, mapped using: UVMap
 			processing texture Cube_020_baked_DIFFUSE
 				texture type:  diffuseTexture, mapped using: "UVMap"
-			bake time:  0 min, 2.0133 secs
+			bake time:  0 min, 0.4972 secs
 		num positions      :  2016
 		num normals        :  2016
 		num tangents       :  0
@@ -108,10 +114,13 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 		num triangles      :  672
 	processing begun of mesh:  Plane.002
 		processing begun of material:  Material.002
-		num positions      :  40449
-		num normals        :  40449
+		processing begun of material:  Material.003
+		processing begun of material:  Material.004
+		processing begun of multimaterial:  factory.Multimaterial#0
+		num positions      :  40603
+		num normals        :  40603
 		num tangents       :  0
-		num uvs            :  80898
+		num uvs            :  81206
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  16882
@@ -126,6 +135,8 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 		num colors         :  0
 		num triangles      :  228
 	processing begun of mesh:  Cube.032
+		animation processing begun
+			processing action Cube.032Action:  in[185 - 185], out[0 - 185]
 		WARNING: No materials have been assigned: 
 		num positions      :  684
 		num normals        :  684
@@ -180,4 +191,4 @@ Exporter version: 2.80.0, Blender version: 2.80 (sub 75)
 	writing mesh:  Door
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 16.7481 secs
+elapsed time:  0 min, 5.8519 secs
