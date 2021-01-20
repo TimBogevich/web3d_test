@@ -74,7 +74,6 @@
               scene.render()
             })
             this.scene = scene
-            scene.createDefaultEnvironment()
             scene.createDefaultSkybox(new BABYLON.CubeTexture(this.sky, scene), true, 100)
             this.advancedTexture = BabylonGUI.AdvancedDynamicTexture.CreateFullscreenUI("UI")
             resolve("success")      
