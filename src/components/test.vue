@@ -70,12 +70,12 @@
             scene.setActiveCameraByName("Camera")
             this.mainCamera = scene.getCameraByName("Camera")
             this.mainCamera.attachControl(this.canvas, true);
+            scene.createDefaultSkybox(new BABYLON.CubeTexture(this.sky, scene), true, 100)
+            this.advancedTexture = BabylonGUI.AdvancedDynamicTexture.CreateFullscreenUI("UI")
             this.engine.runRenderLoop(() => {
               scene.render()
             })
             this.scene = scene
-            scene.createDefaultSkybox(new BABYLON.CubeTexture(this.sky, scene), true, 100)
-            this.advancedTexture = BabylonGUI.AdvancedDynamicTexture.CreateFullscreenUI("UI")
             resolve("success")      
           })
         })
@@ -84,8 +84,10 @@
     },
     async mounted() {
       let wait = await this.init()
-      this.scene.debugLayer.show();
-      this.createLabel('Cube.020', 'CO2: 10Kg/h')
+      if (process.env.VUE_APP_DEBUG) {
+        this.scene.debugLayer.show();
+      }
+      this.createLabel('Cube.020', 'O2: 10Kg/h')
       this.createLabel('Door', 'Passed: 20 people')
       this.createLabel('Cube.038', 'CO2: 100Kg/h')
     },
