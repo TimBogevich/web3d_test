@@ -1,19 +1,17 @@
 <template>
   <v-app>
     <v-main>
-      <test/>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import test from './components/test';
 
 export default {
   name: 'App',
 
   components: {
-    test,
   },
 
   data: () => ({
