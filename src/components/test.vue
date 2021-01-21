@@ -45,6 +45,27 @@
         let skybox = BABYLON.Mesh.CreateBox("skyBox", 100.0, this.scene);
 
       },
+      changeCamera(cameraName) {
+        cameraName = ["Camera", "Camera.001"][cameraName]
+        this.scene.setActiveCameraByName(cameraName)
+        this.mainCamera = this.scene.getCameraByName(cameraName)
+      },
+      createSelector() {
+        var selectBox = new BabylonGUI.SelectionPanel("sp");
+        selectBox.width = 0.08;
+        selectBox.height = 0.10;
+        selectBox.background = "#ffffff";
+        selectBox.alpha = 0.7
+        selectBox.horizontalAlignment = BabylonGUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+        selectBox.verticalAlignment = BabylonGUI.Control.VERTICAL_ALIGNMENT_TOP;
+        
+        this.advancedTexture.addControl(selectBox);
+        var cameraGroup = new BabylonGUI.RadioGroup("Camera");
+	      cameraGroup.addRadio("Camera 1", this.changeCamera, true);
+        cameraGroup.addRadio("Camera 2", this.changeCamera, );
+        selectBox.addGroup(cameraGroup);
+
+      },
       createLabel(element, text) {
         let mesh = this.scene.getMeshByName(element)
         let rect1 = new BabylonGUI.Rectangle();
@@ -90,6 +111,7 @@
       this.createLabel('Cube.020', 'O2: 10Kg/h')
       this.createLabel('Door', 'Passed: 20 people')
       this.createLabel('Cube.038', 'CO2: 100Kg/h')
+      this.createSelector()
     },
     watch : {
       value(newValue, oldValue) {
