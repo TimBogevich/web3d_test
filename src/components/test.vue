@@ -1,6 +1,11 @@
 <template>
-  <div>
-     <canvas id="renderCanvas" style="height: 100%; width: 100%"></canvas>
+  <div v-scroll="onScroll">
+    <v-row style="height: 100%">
+      <canvas id="renderCanvas" style="height: 20%; width: 100%"></canvas>
+    </v-row>
+    <v-row style="height: 7000px">
+      test
+    </v-row>
   </div>
 </template>
 
@@ -22,6 +27,7 @@
   export default {
     data() {
       return {
+        offsetTop : 0,
         value : 50,
         scene: null,
         ground : null,
@@ -38,6 +44,11 @@
       };
     },
     methods: {
+      onScroll (e) {
+        this.mainCamera.position.y = 7 - ( e.target.scrollingElement.scrollTop / 100)
+        this.mainCamera.rotation.x = 0 - ( e.target.scrollingElement.scrollTop / 5000)
+        this.offsetTop = e.target.scrollingElement.scrollTop
+      },
       logScene() {
         console.log(this.scene)
       },
@@ -49,11 +60,12 @@
         cameraName = ["Camera", "Camera.001"][cameraName]
         this.scene.setActiveCameraByName(cameraName)
         this.mainCamera = this.scene.getCameraByName(cameraName)
+        //this.mainCamera.attachControl(this.canvas, true);
       },
       createSelector() {
         var selectBox = new BabylonGUI.SelectionPanel("sp");
         selectBox.width = 0.08;
-        selectBox.height = 0.10;
+        selectBox.height = 0.17;
         selectBox.background = "#ffffff";
         selectBox.alpha = 0.7
         selectBox.horizontalAlignment = BabylonGUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
@@ -90,7 +102,8 @@
           let wait = BABYLON.SceneLoader.Load("", this.fabric, this.engine, (scene) => {
             scene.setActiveCameraByName("Camera")
             this.mainCamera = scene.getCameraByName("Camera")
-            this.mainCamera.attachControl(this.canvas, true);
+            //this.mainCamera.attachControl(this.canvas, true);
+            scene.stopAllAnimations()
             scene.createDefaultSkybox(new BABYLON.CubeTexture(this.sky, scene), true, 100)
             this.advancedTexture = BabylonGUI.AdvancedDynamicTexture.CreateFullscreenUI("UI")
             this.engine.runRenderLoop(() => {
@@ -106,7 +119,7 @@
     async mounted() {
       let wait = await this.init()
       if (process.env.VUE_APP_DEBUG) {
-        this.scene.debugLayer.show();
+        //this.scene.debugLayer.show();
       }
       this.createLabel('Cube.020', 'O2: 10Kg/h')
       this.createLabel('Door', 'Passed: 20 people')
