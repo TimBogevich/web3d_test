@@ -1,7 +1,7 @@
 <template>
   <div v-scroll="onScroll">
-    <v-row style="height: 100%">
-      <canvas id="renderCanvas" style="height: 20%; width: 100%"></canvas>
+    <v-row style="height: 70%">
+      <canvas id="renderCanvas" style="height: 40%; width: 100%"></canvas>
     </v-row>
     <v-row style="height: 7000px">
       test
@@ -142,5 +142,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+  #renderCanvas {
+    height: 70% !important;
+  }
 </style>
